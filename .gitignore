@@ -1,0 +1,8 @@
+# API key 같은 비밀 값이 GitHub에 올라가지 않도록
+.env
+.env*
+.vercel
+
+# 내 컴퓨터 경로가 들어 있는 미리보기 설정
+.claude/
+node_modules/

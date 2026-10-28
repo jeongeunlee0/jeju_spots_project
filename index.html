@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>제주 멍때리기 좋은 명소</title>
+  <meta name="description" content="바다·오름·숲·물·문화 공간 중 멍하니 머물기 좋은 제주의 68곳을 모았어요.">
+  <style>
+    :root {
+      --bg: #f1f7f6; --surface: #ffffff; --ink: #1c2b2d; --muted: #5d7275; --line: #d9e5e3;
+      --accent: #1f7a6d; --accent-soft: #e2f2ef; --warm: #e2873b; --pick: #fff6e8; --heart: #d6336c; --heart-soft: #ffe3e8;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #0f1a1b; --surface: #172526; --ink: #e6f0ee; --muted: #9bb2b0; --line: #274042; --accent: #5fc4b3; --accent-soft: #1d3a37; --warm: #f0a35e; --pick: #2a2418; --heart: #ff8fb1; --heart-soft: #3a2230; }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font-family: "Pretendard", "Noto Sans KR", "Malgun Gothic", system-ui, sans-serif; line-height: 1.6; }
+
+    /* day2 레이아웃: grid-template-areas 로 칸 이름 붙이기 */
+    .page {
+      max-width: 1100px; margin: 0 auto; padding: clamp(8px, 2vw, 20px);
+      display: grid; gap: clamp(8px, 1.5vw, 16px); grid-template-columns: 2fr 1fr;
+      grid-template-areas: "header header" "nav nav" "section aside" "article aside" "footer footer";
+    }
+    header { grid-area: header; } nav { grid-area: nav; }
+    #spots { grid-area: section; } #story { grid-area: article; } aside { grid-area: aside; } footer { grid-area: footer; }
+
+    header { position: relative; overflow: hidden; text-align: center; padding: 34px 16px 30px; border-radius: 14px; color: #fff; background: linear-gradient(135deg, #1f7a6d, #2f9fb5); }
+    header h1 { margin: 0 0 6px; font-size: clamp(1.5rem, 4vw + .5rem, 2.3rem); letter-spacing: -.03em; }
+    header p { margin: 0; opacity: .95; }
+    /* 숨 쉬듯 커졌다 작아지는 원: @keyframes 애니메이션 */
+    .breath { width: 74px; height: 74px; margin: 0 auto 12px; border-radius: 50%; background: rgba(255,255,255,.28); display: grid; place-items: center; font-size: 1.9rem; animation: breath 6s ease-in-out infinite; }
+    @keyframes breath { 0%, 100% { transform: scale(.82); box-shadow: 0 0 0 0 rgba(255,255,255,.35); } 50% { transform: scale(1.08); box-shadow: 0 0 0 18px rgba(255,255,255,0); } }
+    .breath-label { font-size: .82rem; opacity: .85; margin-top: -4px; }
+
+    nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; background: var(--surface); padding: 10px; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,.06); }
+    nav a { text-decoration: none; color: var(--accent); background: var(--accent-soft); padding: 8px 18px; border-radius: 999px; font-weight: bold; transition: background .2s, color .2s, transform .2s; }
+    nav a:hover { background: var(--accent); color: #fff; transform: translateY(-2px); }
+
+    section, article, aside { background: var(--surface); border-radius: 12px; padding: 18px 20px; box-shadow: 0 2px 6px rgba(0,0,0,.06); min-width: 0; }
+    h2 { margin: 0 0 12px; font-size: 1.3rem; color: var(--accent); }
+    [hidden] { display: none !important; }
+    :focus-visible { outline: 3px solid var(--warm); outline-offset: 2px; }
+
+    /* 탭 (day2) */
+    #spots { scroll-margin-top: 12px; }
+    .tabs { display: flex; gap: 4px; margin-bottom: 14px; border-bottom: 2px solid var(--accent-soft); overflow-x: auto; }
+    .tab { border: 0; background: none; padding: 10px 16px; margin-bottom: -2px; border-bottom: 3px solid transparent; font: inherit; font-weight: bold; color: var(--muted); cursor: pointer; white-space: nowrap; }
+    .tab:hover { color: var(--accent); }
+    .tab[aria-selected="true"] { color: var(--accent); border-bottom-color: var(--accent); }
+
+    /* 목록 */
+    .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-bottom: 8px; }
+    .chip { font: inherit; cursor: pointer; padding: 6px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); transition: background .2s; }
+    .chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+    input[type="search"], input[type="text"], select { font: inherit; padding: 9px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--ink); min-width: 0; }
+    input[type="search"], input[type="text"] { flex: 1 1 180px; }
+    .toggle { display: inline-flex; gap: 6px; align-items: center; cursor: pointer; font-size: .92rem; }
+    .summary { color: var(--muted); font-size: .9rem; margin: 4px 2px 12px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+    .item { border: 1px solid var(--line); border-radius: 12px; padding: 12px; display: flex; flex-direction: column; gap: 6px; background: var(--surface); animation: rise .45s ease both; }
+    .item.pick { background: var(--pick); border-color: var(--warm); }
+    @keyframes rise { from { opacity: 0; transform: translateY(10px); } }
+    .item h3 { margin: 0; font-size: 1.05rem; }
+    .meta { display: flex; gap: 6px; flex-wrap: wrap; font-size: .75rem; }
+    .tag { padding: 1px 9px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-weight: 700; }
+    .tag.area { background: transparent; border: 1px solid var(--line); color: var(--muted); font-weight: 500; }
+    .tag.pick { background: var(--warm); color: #fff; }
+    .item p { margin: 0; font-size: .9rem; flex: 1; }
+    .foot { display: flex; justify-content: space-between; gap: 8px; font-size: .8rem; color: var(--muted); }
+    .foot a { color: var(--accent); font-weight: 700; }
+    .empty { text-align: center; color: var(--muted); padding: 30px 0; }
+
+    /* 사진 검색 (day2: Pixabay 슬라이드) */
+    .search { display: flex; gap: 8px; margin-bottom: 8px; }
+    .btn { border: none; border-radius: 8px; padding: 10px 18px; font: inherit; background: var(--accent); color: #fff; cursor: pointer; transition: filter .2s, transform .1s; }
+    .btn:hover { filter: brightness(1.1); } .btn:active { transform: scale(.97); }
+    .btn.sub { background: var(--muted); }
+    #gStatus { min-height: 1.5em; color: var(--muted); font-size: .92rem; margin: 6px 0 10px; }
+    .slider { max-width: 560px; margin: 0 auto; }
+    .slider img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 10px; background: var(--accent-soft); display: block; animation: fade .35s ease; }
+    @keyframes fade { from { opacity: .3; } }
+    #gPage { text-align: center; margin-top: 8px; color: var(--muted); font-size: .9rem; }
+
+    /* 멍 뽑기 (day1: 눌러서 뽑기) */
+    .draw-box { text-align: center; }
+    .counter { display: inline-block; background: var(--surface); border: 3px solid var(--warm); border-radius: 999px; padding: 4px 18px; font-weight: bold; box-shadow: 0 3px 0 var(--warm); margin-bottom: 12px; }
+    .counter span { display: inline-block; color: var(--warm); font-size: 1.3rem; }
+    .counter span.bump, .like-btn span.bump { animation: bump .3s; }
+    @keyframes bump { 50% { transform: scale(1.6); } }
+    .card { min-height: 170px; background: var(--pick); border: 3px dashed var(--warm); border-radius: 18px; padding: 16px 20px; display: flex; flex-direction: column; justify-content: center; gap: 6px; margin: 12px auto 0; max-width: 460px; }
+    .card.pop { animation: pop .5s cubic-bezier(.2, 1.6, .4, 1); }
+    @keyframes pop { from { transform: scale(.3) rotate(-6deg); opacity: 0; } }
+    .card .big { font-size: 1.5rem; font-weight: bold; color: var(--warm); }
+
+    article p { margin: 0 0 10px; } article ul { margin: 0; padding-left: 20px; } article li { margin: 4px 0; }
+
+    /* aside: 분류별 개수(막대가 차오르는 transition) + 고른 곳 + 좋아요 */
+    aside h2 { font-size: 1.1rem; margin-top: 0; }
+    aside h2:not(:first-child) { margin-top: 18px; }
+    .bars { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+    .bars li { font-size: .88rem; }
+    .bar { height: 10px; background: var(--accent-soft); border-radius: 99px; overflow: hidden; margin-top: 3px; }
+    .bar i { display: block; height: 100%; width: 0; background: var(--accent); border-radius: 99px; transition: width 1s ease; }
+    .picks { list-style: none; margin: 0; padding: 0; }
+    .picks li { padding: 6px 0; border-bottom: 1px dashed var(--line); font-size: .9rem; display: flex; justify-content: space-between; gap: 8px; }
+    .picks button { border: 0; background: none; color: var(--accent); font: inherit; cursor: pointer; padding: 0; text-align: left; font-weight: 700; }
+    .like-btn { width: 100%; border: none; background: var(--heart-soft); color: var(--heart); padding: 10px; border-radius: 999px; font: inherit; font-size: 1.05rem; cursor: pointer; transition: transform .1s; }
+    .like-btn:active { transform: scale(.96); }
+    .like-btn span { display: inline-block; }
+
+    footer { background: var(--accent); color: #fff; text-align: center; padding: 16px; border-radius: 12px; font-size: .85rem; }
+    footer a { color: #fff; }
+
+    @media (max-width: 960px) { .page { grid-template-columns: 3fr 2fr; } }
+    @media (max-width: 720px) {
+      .page { grid-template-columns: 1fr; grid-template-areas: "header" "nav" "section" "article" "aside" "footer"; }
+      header { padding: 24px 12px; }
+      nav { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; }
+      nav a { flex: none; padding: 10px 16px; }
+      .search { flex-direction: column; }
+      .btn, .like-btn, .chip { min-height: 44px; }
+    }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="breath" aria-hidden="true">🧘</div>
+      <h1>제주 멍때리기 좋은 명소</h1>
+      <p>바다, 오름, 숲, 물, 조용한 문화 공간까지. 아무 생각 없이 머물다 오기 좋은 곳을 모았어요.</p>
+      <div class="breath-label" aria-hidden="true">커졌다 작아지는 원에 맞춰 숨을 쉬어 보세요</div>
+    </header>
+
+    <nav aria-label="메뉴">
+      <a href="#spots" data-tab="list">📍 명소 목록</a>
+      <a href="#spots" data-tab="gallery">🖼️ 사진 검색</a>
+      <a href="#spots" data-tab="draw">🎲 멍 뽑기</a>
+      <a href="#story">📖 고르는 방법</a>
+      <a href="#picks">★ 가 보고 싶은 곳</a>
+    </nav>
+
+    <section id="spots">
+      <div class="tabs" role="tablist" aria-label="화면 선택">
+        <button class="tab" role="tab" id="tab-list" aria-controls="panel-list" aria-selected="true">📍 명소 목록</button>
+        <button class="tab" role="tab" id="tab-gallery" aria-controls="panel-gallery" aria-selected="false" tabindex="-1">🖼️ 사진 검색</button>
+        <button class="tab" role="tab" id="tab-draw" aria-controls="panel-draw" aria-selected="false" tabindex="-1">🎲 멍 뽑기</button>
+      </div>
+
+      <div class="panel" id="panel-list" role="tabpanel" aria-labelledby="tab-list">
+        <div class="row" id="catRow" role="group" aria-label="분류"></div>
+        <div class="row">
+          <input type="search" id="q" placeholder="이름이나 설명으로 검색 (예: 억새, 일몰)" aria-label="검색">
+          <select id="area" aria-label="지역"><option value="">전체 지역</option></select>
+          <select id="sort" aria-label="정렬">
+            <option value="default">기본 순서</option>
+            <option value="score">멍때리기 점수 높은 순</option>
+            <option value="name">이름 순</option>
+          </select>
+          <label class="toggle"><input type="checkbox" id="pickOnly"> ★만</label>
+        </div>
+        <div class="summary" id="summary" aria-live="polite"></div>
+        <div class="grid" id="grid"></div>
+        <div class="empty" id="empty" hidden>조건에 맞는 장소가 없어요.</div>
+      </div>
+
+      <div class="panel" id="panel-gallery" role="tabpanel" aria-labelledby="tab-gallery" hidden>
+        <h2>🖼️ 분위기 사진 검색</h2>
+        <div class="row" id="moodRow" role="group" aria-label="분위기 검색어"></div>
+        <div class="search">
+          <input id="gQuery" type="text" placeholder="검색어 입력 (예: jeju sea, 제주 오름)" aria-label="사진 검색어">
+          <button class="btn" id="gSearch">검색</button>
+          <button class="btn sub" id="gToggle" hidden>⏸ 멈춤</button>
+        </div>
+        <div id="gStatus">검색어를 입력하면 Pixabay 사진을 0.5초마다 한 장씩 보여드려요. 장소 자체의 사진이 아니라 분위기 사진이에요.</div>
+        <div class="slider"><img id="gImg" alt="" hidden></div>
+        <div id="gPage"></div>
+      </div>
+
+      <div class="panel" id="panel-draw" role="tabpanel" aria-labelledby="tab-draw" hidden>
+        <div class="draw-box">
+          <h2>🎲 오늘 멍때릴 곳 뽑기</h2>
+          <div class="counter">뽑은 횟수 <span id="drawCount">0</span>번</div>
+          <div class="row" style="justify-content:center">
+            <select id="drawCat" aria-label="뽑을 분류"><option value="">모든 분류에서</option></select>
+            <button class="btn" id="drawBtn">🎲 뽑기</button>
+          </div>
+          <div class="card" id="drawCard" aria-live="polite">
+            <div class="big">🌿</div>
+            <div>버튼을 누르면 멍때리기 좋은 곳이 하나 뽑혀요.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <article id="story">
+      <h2>📖 멍때릴 곳, 이렇게 골라 보세요</h2>
+      <p>이 사이트의 분류는 어떤 풍경을 바라보며 쉬고 싶은지에 따라 나눴어요.</p>
+      <ul>
+        <li><b>바다멍</b>: 해변과 해안길에서 파도와 수평선을 바라봐요.</li>
+        <li><b>오름멍</b>: 오름 능선과 들판의 트인 풍경을 바라봐요.</li>
+        <li><b>숲멍</b>: 숲길과 휴양림에서 조용히 걸어요.</li>
+        <li><b>물멍</b>: 폭포와 계곡의 물을 바라봐요.</li>
+        <li><b>문화멍</b>: 미술관, 정원, 사찰처럼 조용한 공간에 머물러요.</li>
+      </ul>
+      <p style="margin-top:10px">운영 시간, 요금, 개방 여부, 날씨에 따른 출입 제한은 바뀔 수 있어요. 가기 전에 카드의 <b>출처 보기</b> 링크로 공식 정보를 확인해 주세요.</p>
+    </article>
+
+    <aside id="picks">
+      <h2>📊 분류별 장소 수</h2>
+      <ul class="bars" id="bars"></ul>
+      <h2>★ 가 보고 싶은 곳</h2>
+      <ul class="picks" id="picks-list"></ul>
+      <h2>👍 이 사이트가 좋았다면</h2>
+      <button id="likeBtn" class="like-btn">❤️ 좋아요 <span id="likeCount">0</span></button>
+    </aside>
+
+    <footer>
+      © 2026 제주 멍때리기 좋은 명소 · 장소 정보 출처: <a href="https://www.visitjeju.net" target="_blank" rel="noopener noreferrer">Visit Jeju</a> · 사진: <a href="https://pixabay.com" target="_blank" rel="noopener noreferrer">Pixabay</a>
+      <br>멍때리기 점수와 ★ 선택은 제작자의 임의 값이며 실제 평점이 아니에요.
+    </footer>
+  </div>
+
+  <script>
+    const $ = (id) => document.getElementById(id)
+    let items = []
+    const state = { category: "전체", q: "", area: "", sort: "default", pickOnly: false }
+
+    // 분위기 사진용 검색어: 장소 자체가 아니라 분위기를 보여 주는 사진을 찾는다
+    const MOOD = { 바다멍: "jeju sea", 오름멍: "jeju oreum", 숲멍: "jeju forest", 물멍: "jeju waterfall", 문화멍: "jeju museum" }
+
+    fetch("jeju_spots.json")
+      .then((res) => res.json())
+      .then((json) => { items = json.items; init() })
+      .catch((err) => { $("summary").textContent = "데이터를 불러오지 못했어요: " + err })
+
+    function init() {
+      const cats = [...new Set(items.map((i) => i.category))]
+      for (const c of ["전체", ...cats]) {
+        const b = document.createElement("button")
+        b.className = "chip"; b.type = "button"; b.textContent = c
+        b.setAttribute("aria-pressed", String(c === state.category))
+        b.onclick = () => { state.category = c; for (const x of $("catRow").children) x.setAttribute("aria-pressed", String(x.textContent === c)); renderList() }
+        $("catRow").appendChild(b)
+      }
+      for (const a of [...new Set(items.map((i) => i.area))].sort()) $("area").append(new Option(a, a))
+      for (const c of cats) { $("drawCat").append(new Option(c, c)); addMoodChip(c) }
+      $("q").oninput = (e) => { state.q = e.target.value.trim(); renderList() }
+      $("area").onchange = (e) => { state.area = e.target.value; renderList() }
+      $("sort").onchange = (e) => { state.sort = e.target.value; renderList() }
+      $("pickOnly").onchange = (e) => { state.pickOnly = e.target.checked; renderList() }
+      renderList(); renderBars(cats); renderPicks()
+    }
+
+    function addMoodChip(category) {
+      const b = document.createElement("button")
+      b.className = "chip"; b.type = "button"; b.textContent = category
+      b.onclick = () => { $("gQuery").value = MOOD[category] || "jeju"; searchImages() }
+      $("moodRow").appendChild(b)
+    }
+
+    function makeCard(i) {
+      const card = document.createElement("article")
+      card.className = "item" + (i.selected ? " pick" : "")
+      const h = document.createElement("h3"); h.textContent = i.name
+      const meta = document.createElement("div"); meta.className = "meta"
+      for (const [text, cls] of [[i.category, "tag"], [i.area, "tag area"], ...(i.selected ? [["★ 가 보고 싶은 곳", "tag pick"]] : [])]) {
+        const s = document.createElement("span"); s.className = cls; s.textContent = text; meta.appendChild(s)
+      }
+      const p = document.createElement("p"); p.textContent = i.description
+      const foot = document.createElement("div"); foot.className = "foot"
+      const sc = document.createElement("span"); sc.textContent = "점수 " + i.score
+      const a = document.createElement("a"); a.href = i.source; a.target = "_blank"; a.rel = "noopener noreferrer"; a.textContent = "출처 보기 ↗"
+      foot.append(sc, a)
+      card.append(h, meta, p, foot)
+      return card
+    }
+
+    function renderList() {
+      let list = items.filter((i) =>
+        (state.category === "전체" || i.category === state.category) &&
+        (state.area === "" || i.area === state.area) &&
+        (!state.pickOnly || i.selected) &&
+        (state.q === "" || i.name.includes(state.q) || i.description.includes(state.q)))
+      if (state.sort === "score") list = [...list].sort((a, b) => b.score - a.score || a.name.localeCompare(b.name, "ko"))
+      if (state.sort === "name") list = [...list].sort((a, b) => a.name.localeCompare(b.name, "ko"))
+      $("grid").replaceChildren(...list.map(makeCard))
+      $("empty").hidden = list.length > 0
+      $("summary").textContent = `${list.length}곳 / 전체 ${items.length}곳`
+    }
+
+    function renderBars(cats) {
+      const max = Math.max(...cats.map((c) => items.filter((i) => i.category === c).length))
+      for (const c of cats) {
+        const n = items.filter((i) => i.category === c).length
+        const li = document.createElement("li")
+        li.append(`${c} ${n}곳`)
+        const bar = document.createElement("div"); bar.className = "bar"
+        const fill = document.createElement("i"); bar.appendChild(fill); li.appendChild(bar)
+        $("bars").appendChild(li)
+        requestAnimationFrame(() => requestAnimationFrame(() => { fill.style.width = (n / max * 100) + "%" }))
+      }
+    }
+
+    function renderPicks() {
+      for (const i of items.filter((x) => x.selected)) {
+        const li = document.createElement("li")
+        const b = document.createElement("button"); b.type = "button"; b.textContent = i.name
+        b.onclick = () => { state.category = "전체"; state.q = i.name; $("q").value = i.name; for (const x of $("catRow").children) x.setAttribute("aria-pressed", String(x.textContent === "전체")); showTab("list"); renderList(); $("spots").scrollIntoView() }
+        const t = document.createElement("small"); t.textContent = i.category
+        li.append(b, t); $("picks-list").appendChild(li)
+      }
+    }
+
+    // ── 탭 (day2) ──
+    const tabNames = ["list", "gallery", "draw"]
+    function showTab(name) {
+      for (const n of tabNames) {
+        const on = n === name
+        $("tab-" + n).setAttribute("aria-selected", on); $("tab-" + n).tabIndex = on ? 0 : -1; $("panel-" + n).hidden = !on
+      }
+      if (name === "gallery" && images.length && !paused) startSlideshow(); else clearInterval(timer)
+    }
+    for (const n of tabNames) $("tab-" + n).addEventListener("click", () => showTab(n))
+    document.querySelector(".tabs").addEventListener("keydown", (e) => {
+      if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return
+      const cur = tabNames.findIndex((n) => $("tab-" + n).getAttribute("aria-selected") === "true")
+      const next = tabNames[(cur + (e.key === "ArrowRight" ? 1 : tabNames.length - 1)) % tabNames.length]
+      showTab(next); $("tab-" + next).focus()
+    })
+    for (const a of document.querySelectorAll("nav a[data-tab]")) a.addEventListener("click", (e) => { e.preventDefault(); showTab(a.dataset.tab); $("spots").scrollIntoView() })
+
+    // ── 사진 슬라이드 (day2): key는 서버(/api/pixabay)가 환경변수로 처리 ──
+    const SLIDE_MS = 500
+    let images = [], index = 0, timer = null, paused = false
+    function showSlide() {
+      const img = images[index]
+      const el = $("gImg"); el.replaceWith(el.cloneNode()); const n = $("gImg")  // 새 사진마다 fade 애니메이션을 다시 켠다
+      n.src = img.webformatURL; n.alt = img.tags; n.hidden = false
+      $("gPage").textContent = `${index + 1} / ${images.length}`
+    }
+    function startSlideshow() {
+      clearInterval(timer)
+      if (!images.length) return
+      index = 0; showSlide()
+      timer = setInterval(() => { index = (index + 1) % images.length; showSlide() }, SLIDE_MS)
+    }
+    async function searchImages() {
+      const q = $("gQuery").value.trim()
+      if (!q) { $("gStatus").textContent = "검색어를 입력해 주세요."; return }
+      $("gStatus").textContent = "검색 중..."
+      try {
+        const res = await fetch("/api/pixabay?q=" + encodeURIComponent(q))
+        const data = await res.json().catch(() => ({}))
+        if (!res.ok) throw new Error(data.error || `사진 검색을 쓸 수 없어요 (오류 ${res.status})`)
+        images = data.hits; paused = false; $("gToggle").textContent = "⏸ 멈춤"
+        $("gStatus").textContent = images.length ? `"${q}" 검색 결과 ${images.length}장 · 0.5초마다 넘어갑니다 · 이미지 제공: Pixabay` : "검색 결과가 없습니다."
+        $("gToggle").hidden = !images.length
+        startSlideshow()
+      } catch (e) {
+        images = []; clearInterval(timer); $("gImg").hidden = true; $("gPage").textContent = ""; $("gToggle").hidden = true
+        $("gStatus").textContent = e.message
+      }
+    }
+    $("gSearch").addEventListener("click", searchImages)
+    $("gQuery").addEventListener("keydown", (e) => { if (e.key === "Enter") searchImages() })
+    $("gToggle").addEventListener("click", () => {
+      paused = !paused; $("gToggle").textContent = paused ? "▶ 이어서" : "⏸ 멈춤"
+      if (paused) clearInterval(timer); else timer = setInterval(() => { index = (index + 1) % images.length; showSlide() }, SLIDE_MS)
+    })
+
+    // ── 멍 뽑기 (day1: 눌러서 뽑기, 카운터 bump, 카드 pop) ──
+    let draws = 0
+    function bump(el) { el.classList.remove("bump"); void el.offsetWidth; el.classList.add("bump") }
+    $("drawBtn").addEventListener("click", () => {
+      const cat = $("drawCat").value
+      const pool = items.filter((i) => !cat || i.category === cat)
+      if (!pool.length) return
+      const i = pool[Math.floor(Math.random() * pool.length)]
+      draws++; $("drawCount").textContent = draws; bump($("drawCount"))
+      const card = $("drawCard")
+      const big = document.createElement("div"); big.className = "big"; big.textContent = i.name
+      const meta = document.createElement("div"); meta.textContent = `${i.category} · ${i.area}`
+      const d = document.createElement("div"); d.textContent = i.description
+      const a = document.createElement("a"); a.href = i.source; a.target = "_blank"; a.rel = "noopener noreferrer"; a.textContent = "출처 보기 ↗"
+      card.replaceChildren(big, meta, d, a)
+      card.classList.remove("pop"); void card.offsetWidth; card.classList.add("pop")
+    })
+
+    // ── 좋아요 (day2) ──
+    let likes = 0
+    $("likeBtn").addEventListener("click", () => { likes++; $("likeCount").textContent = likes; bump($("likeCount")) })
+  </script>
+</body>
+</html>

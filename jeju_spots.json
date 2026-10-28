@@ -1,0 +1,618 @@
+{
+  "region": "제주특별자치도",
+  "topic": "제주 멍때리기 좋은 명소",
+  "items": [
+    {
+      "name": "협재해수욕장",
+      "category": "바다멍",
+      "area": "제주시 한림읍",
+      "description": "경사가 완만하고 수심이 얕으며 소나무 숲이 있고, 바다 앞으로 비양도가 보이는 해변이다.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500697"
+    },
+    {
+      "name": "금능해수욕장",
+      "category": "바다멍",
+      "area": "제주시 한림읍",
+      "description": "협재와 이어진 해변으로, 사람이 덜 붐벼 여유롭게 바다와 비양도를 즐기기 좋다.",
+      "score": 75,
+      "selected": true,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500079"
+    },
+    {
+      "name": "곽지해수욕장",
+      "category": "바다멍",
+      "area": "제주시 애월읍",
+      "description": "길이 약 350m 백사장 뒤로 소나무숲이 있고 물이 빠지면 용천수가 솟는 해변이다.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500056"
+    },
+    {
+      "name": "한담해안산책로",
+      "category": "바다멍",
+      "area": "제주시",
+      "description": "파도가 철썩이는 해안길을 걸으며 제주 서쪽의 일몰을 감상하기 좋은 산책로다.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020159"
+    },
+    {
+      "name": "함덕해수욕장",
+      "category": "바다멍",
+      "area": "제주시 조천읍",
+      "description": "물이 맑고 수심이 얕으며, 서우봉에 오르면 함덕해수욕장을 한눈에 담을 수 있다.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500693"
+    },
+    {
+      "name": "김녕해수욕장",
+      "category": "바다멍",
+      "area": "제주시 구좌읍",
+      "description": "하얀 모래에 부서지는 파도 소리와 코발트빛 바다를 느끼기 좋은 해변이다.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500083"
+    },
+    {
+      "name": "월정리해수욕장",
+      "category": "바다멍",
+      "area": "제주시 구좌읍",
+      "description": "에메랄드빛 바다가 펼쳐지고 카페 의자에 앉아 바다를 보며 쉬어가기 좋은 해변이다.",
+      "score": 70,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500496"
+    },
+    {
+      "name": "하도해변",
+      "category": "바다멍",
+      "area": "제주시 구좌읍",
+      "description": "넓은 백사장과 얕고 완만한 바다가 펼쳐지고 바다 건너 우도를 조망할 수 있는 해변이다.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500677"
+    },
+    {
+      "name": "이호테우해수욕장",
+      "category": "바다멍",
+      "area": "제주시 이호2동",
+      "description": "붉은 조랑말과 흰 조랑말 등대가 서 있고 간조 때 원담이 보이는 해변이다.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000007344"
+    },
+    {
+      "name": "세화해수욕장",
+      "category": "바다멍",
+      "area": "제주시 구좌읍",
+      "description": "지정 해수욕장은 아니고 규모도 크지 않지만 맑고 푸른 바다를 감상할 수 있는 작은 해변이다.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500361"
+    },
+    {
+      "name": "도두항",
+      "category": "바다멍",
+      "area": "제주시 도두1동",
+      "description": "관탈도와 추자도행 낚시배가 출항하는 방파제로, 낚시꾼이 즐겨 찾는 곳이다.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000022529"
+    },
+    {
+      "name": "수월봉",
+      "category": "바다멍",
+      "area": "제주시 한경면",
+      "description": "수월정에 앉아 차귀도로 떨어지는 낙조를 볼 수 있는 제주 서부의 조망봉이다.",
+      "score": 65,
+      "selected": true,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020148"
+    },
+    {
+      "name": "비양도",
+      "category": "바다멍",
+      "area": "제주시 한림읍",
+      "description": "협재해수욕장에서도 보이는 작은 섬으로, 높은 곳에서 바라보는 풍경이 아름답다.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500267"
+    },
+    {
+      "name": "중문색달해변",
+      "category": "바다멍",
+      "area": "서귀포시 색달동",
+      "description": "활처럼 굽은 긴 백사장과 여러 색의 모래, 높은 파도가 특징인 해변이다.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000007158"
+    },
+    {
+      "name": "신양섭지해수욕장",
+      "category": "바다멍",
+      "area": "서귀포시 성산읍",
+      "description": "반달 모양 해안선 안쪽이라 파도가 잔잔하고, 반대쪽에서 성산일출봉과 유채꽃 풍경을 볼 수 있다.",
+      "score": 75,
+      "selected": true,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500400"
+    },
+    {
+      "name": "광치기해변",
+      "category": "바다멍",
+      "area": "서귀포시 성산읍",
+      "description": "성산일출봉과 용암 해안 지형을 한눈에 담고 아침에 떠오르는 해를 볼 수 있는 해변이다.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018413"
+    },
+    {
+      "name": "섭지코지",
+      "category": "바다멍",
+      "area": "서귀포시 성산읍",
+      "description": "성산일출봉을 배경으로 펼쳐지는 해안 풍경이 아름다운 곶이다.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500343"
+    },
+    {
+      "name": "용눈이오름",
+      "category": "오름멍",
+      "area": "제주시 구좌읍",
+      "description": "경사가 완만해 걷기 편하고 부드러운 능선과 성산일출봉, 우도까지 보이는 오름이다.",
+      "score": 65,
+      "selected": true,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500466"
+    },
+    {
+      "name": "다랑쉬오름",
+      "category": "오름멍",
+      "area": "제주시 구좌읍",
+      "description": "꼭대기의 둥근 분화구가 달을 떠올리게 하는 오름이다.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500118"
+    },
+    {
+      "name": "새별오름",
+      "category": "오름멍",
+      "area": "제주시 애월읍",
+      "description": "정상에 오르면 제주 서쪽 해안과 비양도를 조망할 수 있고 가을엔 억새가 아름다운 오름이다.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500309"
+    },
+    {
+      "name": "아부오름",
+      "category": "오름멍",
+      "area": "제주시 구좌읍",
+      "description": "굼부리 안 원형 삼나무숲이 특징이고 어렵지 않게 오를 수 있는 오름이다.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500407"
+    },
+    {
+      "name": "산굼부리",
+      "category": "오름멍",
+      "area": "제주시 조천읍",
+      "description": "천연기념물인 분화구 전망대에서 가을에 은빛 물결을 이루는 억새밭을 감상할 수 있다.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500283"
+    },
+    {
+      "name": "손지오름",
+      "category": "오름멍",
+      "area": "제주시 구좌읍",
+      "description": "억새 숲을 헤쳐 오르는 작은 오름으로, 건너편 용눈이오름보다 비교적 한산하다.",
+      "score": 75,
+      "selected": true,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500374"
+    },
+    {
+      "name": "따라비오름",
+      "category": "오름멍",
+      "area": "서귀포시 표선면",
+      "description": "부드러운 능선과 가을 억새 군락, 억새 너머 풍력발전단지를 바라보기 좋은 오름이다.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500168"
+    },
+    {
+      "name": "큰사슴이오름",
+      "category": "오름멍",
+      "area": "서귀포시 표선면",
+      "description": "정상부 동서 봉우리 사이에 원형 화구가 둥그렇게 패어 있는 화산체이다.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500646"
+    },
+    {
+      "name": "금오름",
+      "category": "오름멍",
+      "area": "제주시 한림읍",
+      "description": "정상에서 한라산, 비양도, 금악마을이 보이고 분화구 능선을 따라 산책하기 좋은 오름이다.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000019460"
+    },
+    {
+      "name": "큰노꼬메오름",
+      "category": "오름멍",
+      "area": "제주시 애월읍",
+      "description": "정상 전망에서 노꼬메족은오름과 한라산, 한림 앞바다가 보이고 가을엔 억새가 일렁인다.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000021515"
+    },
+    {
+      "name": "족은노꼬메오름",
+      "category": "오름멍",
+      "area": "제주시 애월읍",
+      "description": "숲이 울창한 오름으로, 정상에서 탁 트인 경치와 반대편 큰노꼬메오름을 조망할 수 있다.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000021520"
+    },
+    {
+      "name": "어승생악",
+      "category": "오름멍",
+      "area": "제주시 해안동",
+      "description": "정상에 둘레 약 250m의 원형 화구호가 있으나 늘 물이 고여 있지는 않은 오름이다.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500429"
+    },
+    {
+      "name": "지미봉",
+      "category": "오름멍",
+      "area": "제주시 구좌읍",
+      "description": "성산일출봉과 우도, 종달리 앞바다가 내다보이는 올레 21코스의 오름으로 '땅끝'이라 불린다.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500610"
+    },
+    {
+      "name": "군산오름",
+      "category": "오름멍",
+      "area": "서귀포시 안덕면",
+      "description": "기생화산 중 가장 큰 규모로 알려진 오름으로, 정상에서 한라산과 산방산, 마라도가 조망된다.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500068"
+    },
+    {
+      "name": "아끈다랑쉬오름",
+      "category": "오름멍",
+      "area": "제주시 구좌읍",
+      "description": "가을이면 억새가 오름을 가득 메우고, 정상에서 한라산과 어우러진 억새를 볼 수 있다.",
+      "score": 65,
+      "selected": true,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500406"
+    },
+    {
+      "name": "가메오름",
+      "category": "오름멍",
+      "area": "제주시 애월읍",
+      "description": "정상에서 누운오름, 새별오름, 이달오름과 한림의 비양도, 바다를 볼 수 있다.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000019536"
+    },
+    {
+      "name": "느지리오름",
+      "category": "오름멍",
+      "area": "제주시 한림읍",
+      "description": "정상 전망대에서 한라산과 새별오름 등 열두 개 산과 오름을 360도로 둘러보며 해안과 석양도 본다.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000008011"
+    },
+    {
+      "name": "정물오름",
+      "category": "오름멍",
+      "area": "제주시 한림읍",
+      "description": "정상에서 비양도와 한라산, 제주 바다가 보이고 계절마다 달라지는 이시돌목장 풍경도 즐길 수 있다.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500530"
+    },
+    {
+      "name": "사려니숲길",
+      "category": "숲멍",
+      "area": "제주시 봉개동",
+      "description": "절물오름 남쪽에서 붉은오름 입구까지 약 10km, 삼나무가 짙은 그늘을 만드는 숲길이다.",
+      "score": 65,
+      "selected": true,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500281&menuId=DOM"
+    },
+    {
+      "name": "비자림",
+      "category": "숲멍",
+      "area": "제주시 구좌읍",
+      "description": "500~800년생 비자나무가 자생하는 숲에서 화산송이가 깔린 비교적 평탄한 길을 걸을 수 있다.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500270&menuId=DOM_000001718008000000"
+    },
+    {
+      "name": "절물자연휴양림",
+      "category": "숲멍",
+      "area": "제주시",
+      "description": "쭉쭉 뻗은 삼나무가 가득하고 산책로가 완만해 청량한 숲의 힐링감을 느끼기 좋다.",
+      "score": 70,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500570"
+    },
+    {
+      "name": "교래자연휴양림",
+      "category": "숲멍",
+      "area": "제주시 조천읍",
+      "description": "곶자왈 생태 체험이 가능한 휴양림으로, 생태관찰로(2.5km)와 오름산책로(7km)가 있다.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500061"
+    },
+    {
+      "name": "서귀포자연휴양림",
+      "category": "숲멍",
+      "area": "서귀포시 대포동",
+      "description": "해발 700m 휴양림으로 서귀포 시내와 10°C 정도 기온 차가 나 시원하게 삼림욕을 즐길 수 있다.",
+      "score": 70,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500327"
+    },
+    {
+      "name": "붉은오름자연휴양림",
+      "category": "숲멍",
+      "area": "서귀포시",
+      "description": "입구 옆으로 사려니숲길을 산책할 수 있고 1km가 조금 넘는 무장애숲길이 있는 휴양림이다.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500266&menuId=DOM_000001817000000005"
+    },
+    {
+      "name": "동백동산",
+      "category": "숲멍",
+      "area": "제주시 조천읍",
+      "description": "용암이 쪼개져 형성된 곶자왈 속에 사철 마르지 않는 습지와 숲이 있는 생태 명소이다.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500156"
+    },
+    {
+      "name": "한라산둘레길 9구간(숫모르편백숲길)",
+      "category": "숲멍",
+      "area": "제주시 봉개동",
+      "description": "화산토가 깔리고 편백나무가 울창해 가만히 있어도 시원하고 개운한 총 8km 숲길이다.",
+      "score": 75,
+      "selected": true,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000021404"
+    },
+    {
+      "name": "서귀포 치유의 숲",
+      "category": "숲멍",
+      "area": "서귀포시",
+      "description": "삼나무가 늘어선 조용하고 안전한 치유의 숲길로, 약 10개의 테마 숲길이 있다.",
+      "score": 75,
+      "selected": true,
+      "source": "https://www.visitjeju.net/en/detail/view?contentsid=CNTS_000000000018311"
+    },
+    {
+      "name": "머체왓숲길",
+      "category": "숲멍",
+      "area": "서귀포시 남원읍",
+      "description": "오래된 돌담길에서 대나무 군락지, 서중천 숲 터널로 이어지는 2024 제주 웰니스 관광지 숲길이다.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000008001"
+    },
+    {
+      "name": "천지연폭포",
+      "category": "물멍",
+      "area": "서귀포시",
+      "description": "하늘과 땅이 만나 이룬 연못이라는 뜻의 폭포 아래 깊은 연못을 바라보며 쉬기 좋다.",
+      "score": 70,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500618&menuId=DOM_000001718002000000"
+    },
+    {
+      "name": "정방폭포",
+      "category": "물멍",
+      "area": "서귀포시",
+      "description": "폭포수가 바다로 곧장 떨어지고 양쪽에 주상절리 암벽이 어우러진 풍경을 바라보기 좋다.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500531"
+    },
+    {
+      "name": "소정방폭포",
+      "category": "물멍",
+      "area": "서귀포시 동홍동",
+      "description": "정방폭포에서 동쪽 해안으로 떨어지는 아담한 폭포와 서귀포 앞바다 야경을 바라보기 좋다.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500373"
+    },
+    {
+      "name": "엉또폭포",
+      "category": "물멍",
+      "area": "서귀포시 강정동",
+      "description": "평소엔 숲속에 숨어 있다가 비가 쏟아지면 위용스러운 폭포의 모습을 드러낸다.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500434"
+    },
+    {
+      "name": "원앙폭포",
+      "category": "물멍",
+      "area": "서귀포시",
+      "description": "깊은 계곡과 울창한 상록수림 사이로 폭포수가 떨어지는 풍경을 보며 시원하게 쉬기 좋다.",
+      "score": 80,
+      "selected": false,
+      "source": "https://www.visitjeju.net/en/detail/view?contentsid=CNTS_000000000019594&menuId=DOM_000001718002000000"
+    },
+    {
+      "name": "돈내코",
+      "category": "물멍",
+      "area": "서귀포시 상효동",
+      "description": "한라산에서 내려온 차고 맑은 물이 흐르는 상록수 둘러싸인 계곡에서 쉬기 좋다.",
+      "score": 70,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500146"
+    },
+    {
+      "name": "쇠소깍",
+      "category": "물멍",
+      "area": "서귀포시",
+      "description": "민물과 바닷물이 만나 생긴 깊은 웅덩이를 기암괴석과 숲이 감싸 고요히 바라보기 좋다.",
+      "score": 70,
+      "selected": false,
+      "source": "https://m.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500384"
+    },
+    {
+      "name": "용연계곡",
+      "category": "물멍",
+      "area": "제주시 용담동",
+      "description": "용연구름다리가 놓인 계곡의 물가 풍경을 바라보며 산책하기 좋다.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500472"
+    },
+    {
+      "name": "안덕계곡",
+      "category": "물멍",
+      "area": "서귀포시 안덕면",
+      "description": "기암절벽 사이로 맑은 물이 흐르는 계곡을 상록수림 그늘에서 조용히 즐기기 좋다.",
+      "score": 75,
+      "selected": true,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500410"
+    },
+    {
+      "name": "김영갑갤러리두모악",
+      "category": "문화멍",
+      "area": "서귀포시 성산읍",
+      "description": "제주를 사랑한 사진가 김영갑의 작품과 휴식할 수 있는 야외 정원을 천천히 둘러보기 좋다.",
+      "score": 70,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000000972"
+    },
+    {
+      "name": "제주현대미술관",
+      "category": "문화멍",
+      "area": "제주시 한경면",
+      "description": "야외공원과 전시실을 갖춘 미술관으로 저지문화예술인마을과 함께 천천히 둘러보기 좋다.",
+      "score": 70,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500583"
+    },
+    {
+      "name": "이중섭미술관",
+      "category": "문화멍",
+      "area": "서귀포시 서귀동",
+      "description": "이중섭미술관 바로 옆 생가와 이중섭거리를 함께 거닐며 화가의 삶을 떠올리기 좋다.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500509"
+    },
+    {
+      "name": "방주교회",
+      "category": "문화멍",
+      "area": "서귀포시 안덕면",
+      "description": "인공 수조 위에 건물이 떠 있는 듯한 이타미 준의 건축을 바라보며 머물기 좋다.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018384"
+    },
+    {
+      "name": "제주도립김창열미술관",
+      "category": "문화멍",
+      "area": "제주시 한경면",
+      "description": "물방울 화가 김창열의 작품을 감상하며 저지문화예술인마을에서 쉬어가기 좋다.",
+      "score": 70,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020631"
+    },
+    {
+      "name": "제주특별자치도립미술관",
+      "category": "문화멍",
+      "area": "제주시",
+      "description": "물 위에 떠 있는 모습의 미술관과 야외정원을 산책하며 전시를 둘러보기 좋다.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500544"
+    },
+    {
+      "name": "산방굴사",
+      "category": "문화멍",
+      "area": "서귀포시 안덕면",
+      "description": "산방산 아래에서 용머리해안과 형제섬이 펼쳐진 풍경을 내려다보기 좋다.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500287"
+    },
+    {
+      "name": "약천사",
+      "category": "문화멍",
+      "area": "서귀포시 대포동",
+      "description": "마당에서 제주 해안을 내려다보는 전망과 템플스테이로 마음을 쉬기 좋은 사찰이다.",
+      "score": 75,
+      "selected": true,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000019754"
+    },
+    {
+      "name": "한림공원",
+      "category": "문화멍",
+      "area": "제주시 한림읍",
+      "description": "아열대 식물원과 분재원, 동굴 등 9개 테마 공간을 산책하며 머물기 좋다.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500690"
+    },
+    {
+      "name": "베케",
+      "category": "문화멍",
+      "area": "서귀포시 신효동",
+      "description": "밭에서 나온 돌을 쌓은 돌무더기를 뜻하는 이름의 정원을 천천히 거닐며 쉬기 좋다.",
+      "score": 80,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000013074"
+    },
+    {
+      "name": "본태박물관",
+      "category": "문화멍",
+      "area": "서귀포시 안덕면",
+      "description": "노출콘크리트와 빛, 벽을 타고 흐르는 물길이 차분한 명상의 시간을 선사한다.",
+      "score": 85,
+      "selected": true,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500250"
+    },
+    {
+      "name": "기당미술관",
+      "category": "문화멍",
+      "area": "서귀포시 서홍동",
+      "description": "농촌의 눌을 형상화한 나선형 동선의 전시실에서 작품을 감상하기 좋은 소박한 미술관이다.",
+      "score": 60,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500326"
+    },
+    {
+      "name": "아라리오뮤지엄 탑동시네마",
+      "category": "문화멍",
+      "area": "제주시 삼도이동",
+      "description": "버려진 옛 영화관 건물의 흔적이 남은 현대미술관에서 차분히 작품을 감상하기 좋다.",
+      "score": 70,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020416"
+    },
+    {
+      "name": "제주돌문화공원",
+      "category": "문화멍",
+      "area": "제주시 조천읍",
+      "description": "설문대할망과 오백장군을 테마로 한 공원에서 고즈넉한 중산간 분위기 속에 머물기 좋다.",
+      "score": 70,
+      "selected": false,
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500547"
+    }
+  ]
+}
